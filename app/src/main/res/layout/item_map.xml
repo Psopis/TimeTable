@@ -1,77 +1,85 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.cardview.widget.CardView
+<LinearLayout
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:layout_gravity="bottom"
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
-    android:layout_height="wrap_content"
-    android:backgroundTint="#C5CAE9"
-    android:layout_gravity="bottom">
+    xmlns:tools="http://schemas.android.com/tools">
 
-    <LinearLayout
+
+    <androidx.cardview.widget.CardView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:orientation="vertical">
-
-        <androidx.constraintlayout.widget.ConstraintLayout
-            android:id="@+id/constrainOf_Item_map"
-            android:layout_width="match_parent"
-            android:layout_height="42dp">
-
-            <ImageView
-                android:id="@+id/imageView"
-                android:layout_width="36dp"
-                android:layout_height="36dp"
-                android:src="@drawable/baseline_brightness_1_black_24"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent"
-                app:tint="#3F51B5" />
-
-            <TextView
-                android:id="@+id/textViewOst"
-                android:layout_width="323dp"
-                android:layout_height="19dp"
-                android:layout_marginStart="8dp"
-                android:gravity="top"
-                android:textColor="#616161"
-                android:textSize="16sp"
-                android:textStyle="bold"
-                app:layout_constraintEnd_toStartOf="@+id/textViewTime"
-                app:layout_constraintHorizontal_bias="0.016"
-                app:layout_constraintStart_toEndOf="@+id/imageView"
-                app:layout_constraintTop_toTopOf="parent"
-                tools:text="station" />
-
-            <TextView
-                android:id="@+id/textViewTime"
-                android:layout_width="40dp"
-                android:layout_height="16dp"
-                android:layout_marginTop="20dp"
-                android:layout_marginEnd="304dp"
-                android:text="time"
-                android:textColor="#888888"
-                android:textSize="13dp"
-                android:textStyle="bold"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintTop_toTopOf="parent" />
-
-            <ImageView
-                android:id="@+id/imageView4"
-                android:layout_width="22dp"
-                android:layout_height="22dp"
-                android:layout_marginTop="10dp"
-                android:layout_marginEnd="10dp"
-                android:layout_marginBottom="10dp"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintTop_toTopOf="parent"
-                app:srcCompat="@drawable/baseline_brightness_1_black_24" />
-
-        </androidx.constraintlayout.widget.ConstraintLayout>
-
-        <View
-        android:background="@color/black"
+        android:backgroundTint="#393939"
+        android:layout_margin="1.5dp"
+        app:cardCornerRadius="4.7dp">
+    <LinearLayout
+        android:id="@+id/LinearLayout"
         android:layout_width="match_parent"
-        android:layout_height="1sp"/>
+        android:layout_height="wrap_content"
+        android:background="#505050"
+        android:orientation="horizontal">
 
-    </LinearLayout>
-</androidx.cardview.widget.CardView>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/constrainOf_Item_map"
+                android:layout_width="match_parent"
+                android:paddingLeft="6dp"
+                android:layout_height="42dp">
+
+                <ImageView
+                    android:id="@+id/imageView"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:src="@drawable/bus_marker"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/textViewOst"
+                    android:layout_width="302dp"
+                    android:layout_height="22dp"
+                    android:layout_marginStart="8dp"
+                    android:gravity="top"
+                    android:textColor="#FFFFFF"
+                    android:textSize="14sp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toStartOf="@+id/textViewTime"
+                    app:layout_constraintHorizontal_bias="0.058"
+                    app:layout_constraintStart_toEndOf="@+id/imageView"
+                    app:layout_constraintTop_toTopOf="parent"
+                    tools:text="station" />
+
+                <TextView
+                    android:id="@+id/textViewTime"
+                    android:layout_width="40dp"
+                    android:layout_height="16dp"
+                    android:layout_marginEnd="16dp"
+                    android:text="time"
+                    android:textColor="#B8B8B8"
+                    android:textSize="13dp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </LinearLayout>
+    </androidx.cardview.widget.CardView>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.8dp"
+        android:layout_margin="2dp"
+
+        android:background="#EAEAEA"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView"/>
+</LinearLayout>
+
+
+
